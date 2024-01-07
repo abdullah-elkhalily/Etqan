@@ -1,0 +1,130 @@
+
+/* .STartContant{
+    height: 100%;
+    background-image: url("./Pictuers/1.jpeg");
+    background-size: cover;
+} */
+
+.START-CONTANT{
+    height: 85vh;
+    /* background-size: cover; */
+justify-items: center;
+display: flex;
+    direction: rtl;
+    position: relative;
+     background-color:#c2c4c4;
+  
+}
+.img_start{
+
+    position: absolute;
+   
+    width: 35%;
+    height: 80%;
+  
+}
+
+.AdressStartText{
+    position: absolute;
+   
+    color: #0b770e;
+    font-size: 60px;
+    font-weight: 900;
+    width: 50%;
+}
+
+    .Starttext{
+        position: absolute;
+   
+
+    font-weight: 700;
+font-size: 27px;
+    color:black;
+   
+    width: 50%;
+       
+    }
+    .StartButton{
+
+        background-color: #bcccbc;
+        color:#0b770e;
+        padding: 1rem;
+        font-size: 25px;
+        cursor: pointer;
+        border-radius: .3rem;
+        display: flex;
+        position: absolute;
+        font-weight:900;
+      
+        border: #4CAF50 1px solid;
+        min-width: 160px; 
+        text-align: center;
+        justify-content: center;
+}
+.StartButton:hover{
+    background-color: #f2f8f3;}
+.firstAddress{ right:2%;top:.5%}
+    .firstText{ top: 25%;  right:2%;}
+.firstimg{ left: 5%;top: 10%;}
+.firstButton{  right: 2%; bottom:10%;}
+.secndContant{background-color:#7bb981;}
+.secndAddress{  right:  50%;}
+.secndText{ top: 25%;  right:  50%; }
+.secndimg{ right: 5%; top: 10%;}
+.secndButton{  right:  50%;  bottom:10%;}
+
+    @media screen and (max-width:780px) {
+
+    .AdressStartText{
+        width: 80%;
+        font-size: 40px;
+        text-align: center;
+    }
+    .Starttext{
+        width: 80%;
+        top: 25%;
+        font-size: 25px;
+    }
+    .img_start{
+        /* display: none; */
+        height: 30%;
+        width: 100%;
+        border-radius: 2%;
+        box-shadow: none;
+    }
+    .disnon:hover{
+        display: none;
+        transition-duration: 1500ms;
+    }
+    .disblock:hover{
+        display: none;
+        transition-duration: 1500ms;
+    
+    }
+    .firstButton{
+        bottom: 10%;
+        min-width: 140px; 
+    }
+    .secndButton{
+        right: 10%;
+    }
+    .START-CONTANT{
+        margin: 20px;
+        height: 100vh;
+        /* border:  1px solid; */
+        border-radius: 2%;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    .firstAddress,.secndAddress{ right:15%;top:25%}
+    .firstText ,.secndText{ top: 39%;  right:15%;}
+.firstimg,.secndimg{ top: 0%; right: 0%;}
+.firstButton,.secndButton{  right: 30%; bottom:6%;}
+/* .secndContant{background-color: #4CAF50;} */
+/* .secndAddress{ right:6%;top:20%}
+.secndText{ top: 39%;  right:6%;}
+.secndimg{ top: 1%; right: 6%;}
+.secndButton{  right:  6%;  bottom:10%;} */
+
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            width:100%;
+            border-collapse: collapse;
+        }
+        table td{
+            padding: 5px;
+            text-align: center;
+        }
+        form input{
+            display: block;
+            width: 50%;
+            margin-bottom: 15px;
+            padding: 10px;
+        }
+        form input:focus{
+            outline:none;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        form input[type="submit"]{
+            width: 20%;
+            background-color: lightskyblue;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <input type="text" id="name" placeholder="اسم الطالب ">
+        <input type="number" id="age" placeholder="العمر ">
+        <input type="text" id="email" placeholder="دورات الاحكام ">
+        <input type="submit"   value="اضف للجدول">
+    </form>
+    <table border="1">
+        <thead>
+            <td>اسم الطالب</td>
+            <td>العمر</td>
+            <td>دورات الاحكام</td>
+        </thead>
+    </table>
+    <script src="./js/adrar.js"></script>
+</body>
+</html>

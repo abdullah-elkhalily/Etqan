@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact Us</title>
+</head>
+<body>
+  <h1>Contact Us</h1>
+  
+  <form id="contactForm">
+    <label for="email">الاسم:</label>
+    <input type="text" id="UserName" name="UserName" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init('Mix_UDB4zCHbluAk5'); // Replace with your EmailJS user ID
+
+      document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const UserName = document.getElementById('UserName').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        emailjs.send('service_mh4uj8q', 'template_cvceugk', {
+
+          
+          to_email: email,
+          message: message,
+          from_name:UserName,
+
+        })
+        .then(function(response) {
+          console.log('Email sent:', response);
+          // Optionally, display a success message to the user
+        }, function(error) {
+          console.error('Email sending failed:', error);
+          // Optionally, display an error message to the user
+        });
+      });
+    })();
+  </script>
+</body>
+</html>

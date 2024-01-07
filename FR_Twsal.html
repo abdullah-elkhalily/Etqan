@@ -1,0 +1,175 @@
+﻿
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>تواصل معنا</title>
+    
+     <link rel="stylesheet" href="./Css/Twasel.css" />
+     <link rel="stylesheet" href="./Css/etquan.css"/>
+
+
+ 
+<!-- لينك الايكون -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+   
+    
+    <form id="contactForm" runat="server" dir="rtl">
+
+        <div class="etqaan-home" style=" background-color: darkolivegreen; ">
+
+            <div class="logo">
+                <img class="imgLogo"
+                
+  src="./Pictuers/Alshea3ar-removebg-preview.png" alt="">  
+            </div>
+        
+        
+        
+        <nav class="etqaan-navbar"> 
+            <div class="hedText">
+                <a  Class="Text"  href="./Default.html"> الرئـيـســـة</a>     
+        
+            </div>
+          
+           <div class="hedText">
+            <a href="./AnEtqan.html" Class="Text" > عن إتــقــان</a>
+        
+           </div>
+        
+           <div class="hedText">
+            <a href="./FR_Twsal.html" Class="Text" style="color: rgb(5, 59, 9);">تواصـل معـنا</a>
+           
+        </div>
+        
+        
+        </nav>
+        <div  class="menueButton">    
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fa-solid fa-bars"></i></button>
+                <div class="dropdown-content">
+                  
+                   <div class="hedTexTMin">
+                    <a  class="TextMin"  href="./Default.html"> الرئـيـســـة</a>     
+            
+                </div>
+              
+                <div class="hedTexTMin">
+                <a href="./AnEtqan.html" class="TextMin" > عن إتــقــان</a>
+            
+               </div>
+               <div class="hedTexTMin">
+                <a href="./FR_Twsal.html" class="TextMin">تواصـل معـنا</a>
+               
+            </div>
+            
+                
+                 
+                </div>
+                
+            </div>
+        </div>
+        
+        </div>
+
+
+      <div class="twasel-contant">
+     
+             
+  <div class="soshial">   
+                        <p> او تواصل من خلال </p>
+                            </div>
+                <div class="footerhom">
+
+                  
+                
+             
+              
+             
+              <div class="foterText">
+            
+            
+                    <a class="facebookLink" href="https://t.me/itkan2018"target="blank"><i class="fa-brands fa-telegram"></i></a>
+                </div>
+                
+                <div class="foterText">
+            
+                    <a class="WhatsAppLink" href="https://whatsapp.com/channel/0029Va12XpE9xVJol7r8A60p" target="blank"><i
+                            class="fa-brands fa-whatsapp">
+                        </i>
+                    </a>
+            
+                </div>
+                <div class="foterText">
+            
+            
+                    <a class="facebookLink" href="https://www.facebook.com/profile.php?id=100085154120431&mibextid=ZbWKwL" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+            </div> 
+            
+
+
+
+           
+      
+       
+  <div class="formTWasel">   
+    <div class="heder">   <h1 > تواصـل معنا </h1>
+        <p>  
+             من خلال ارسال رسالة عبر البريد الالكترونى</p> 
+            </div>
+
+ <div class="NameAndEmail">  
+    <input type="text" id="UserName" name="UserName" placeholder="الاسم بالكامل" required>
+
+    <input type="email" id="email" name="email" placeholder="البريد الالكترونى" required>
+
+</div>
+ 
+    <textarea id="message" name="message" rows="5"  placeholder="الرسالة"></textarea>
+    <button class="send" type="submit">ارسال</button>  
+
+</div>
+    </div>
+
+    </form>
+  
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function() {
+        emailjs.init('Mix_UDB4zCHbluAk5'); // Replace with your EmailJS user ID
+  
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+          event.preventDefault();
+          const UserName = document.getElementById('UserName').value;
+          const email = document.getElementById('email').value;
+          const message = document.getElementById('message').value;
+  
+          emailjs.send('service_mh4uj8q', 'template_cvceugk', {
+  
+            
+            to_email: email,
+            message: message,
+            from_name:UserName,
+  
+          })
+          .then(function(response) {
+            console.log('Email sent:', response);
+            // Optionally, display a success message to the user
+          }, function(error) {
+            console.error('Email sending failed:', error);
+            // Optionally, display an error message to the user
+          });
+        });
+      })();
+    </script>
+  </body>
+  
+  
+  
+  
+  </html>
